@@ -1,6 +1,14 @@
 {
     "name": "san-ratul/shopassist-ai",
     "description": "AI Chatbot for Laravel E-commerce",
+    "keywords": [
+        "laravel",
+        "ai",
+        "chatbot",
+        "ecommerce",
+        "openai"
+    ],
+    "homepage": "https://github.com/san-ratul/shopassist-ai",
     "type": "library",
     "license": "MIT",
     "authors": [
@@ -11,11 +19,21 @@
     ],
     "require": {
         "php": "^8.2 || ^8.3",
-        "illuminate/support": "^11.0 || ^12.0 || ^13.0"
+        "illuminate/support": "^11.0 || ^12.0 || ^13.0",
+        "illuminate/database": "^11.0 || ^12.0 || ^13.0"
+    },
+    "require-dev": {
+        "orchestra/testbench": "^9.0 || ^10.0 || ^11.0",
+        "phpunit/phpunit": "^11.0"
     },
     "autoload": {
         "psr-4": {
             "SanRatul\\ShopAssist\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "SanRatul\\ShopAssist\\Tests\\": "tests/"
         }
     },
     "extra": {
