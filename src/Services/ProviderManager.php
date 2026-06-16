@@ -3,8 +3,8 @@
 namespace SanRatul\ShopAssist\Services;
 
 use Closure;
-use http\Exception\InvalidArgumentException;
 use Illuminate\Contracts\Container\Container;
+use InvalidArgumentException;
 use SanRatul\ShopAssist\Contracts\AIProvider;
 
 class ProviderManager
@@ -49,7 +49,8 @@ class ProviderManager
 
     public function getDefaultDriver(): string
     {
-        return config('shopassist.default_provider');
+        return app(SettingsService::class)
+                ->get('provider', config('shopassist.default_provider'));
     }
 
     public function forgetDrivers(): static

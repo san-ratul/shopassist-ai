@@ -9,10 +9,9 @@ class AIResponse
         public readonly string $content,
         public readonly ?string $provider = null,
         public readonly ?string $model = null,
-        public readonly ?string $tokens = null,
-        public readonly array $metaData = [],
-    )
-    {}
+        public readonly ?int $tokens = null,
+        public readonly array $metadata = [],
+    ) {}
 
     public function toArray(): array
     {
@@ -21,7 +20,7 @@ class AIResponse
             'provider' => $this->provider,
             'model' => $this->model,
             'tokens' => $this->tokens,
-            'metaData' => $this->metaData,
+            'metaData' => $this->metadata,
         ];
     }
 

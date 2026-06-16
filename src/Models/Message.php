@@ -27,9 +27,9 @@ class Message extends Model
     /*
      * The conversation this message belongs to
      */
-    public function conversations(): BelongsTo
+    public function conversation(): BelongsTo
     {
-        return $this->belongsTo(Conversation::class, 'conversation_id');
+        return $this->belongsTo(Conversation::class);
     }
 
     public function isUser(): bool
